@@ -6,14 +6,14 @@ import pandas as pd
 from os import getcwd
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from skimage.feature import greycomatrix, greycoprops
+from skimage.feature import graycomatrix, graycoprops
 import numpy as np
 
 dataset=pd.read_csv('featureExtracted.csv')
 
 def calc_glcm_all_agls(img, label, props, dists=[5], agls=[0, np.pi/4, np.pi/2, 3*np.pi/4], lvl=256, sym=True, norm=True):
         
-        glcm = greycomatrix(img, 
+        glcm = graycomatrix(img, 
                             distances=dists, 
                             angles=agls, 
                             levels=lvl,
@@ -21,7 +21,7 @@ def calc_glcm_all_agls(img, label, props, dists=[5], agls=[0, np.pi/4, np.pi/2, 
                             normed=norm)
         
         feature = []
-        glcm_props = [propery for name in props for propery in greycoprops(glcm, name)[0]]
+        glcm_props = [propery for name in props for propery in graycoprops(glcm, name)[0]]
         for item in glcm_props:
                 feature.append(item)
         # feature.append(label) 
