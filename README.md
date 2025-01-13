@@ -6,6 +6,7 @@ This project is a Django-based web application for Brain Hemorrhage detection.
 ## Prerequisites
 
 - Python (>= 3.6)
+- PostgreSQL (or any other supported database)
 
 ## Installation
 
@@ -21,7 +22,7 @@ Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/yajneshshetty/Intracranial-hemorrhage-detection-ICH-.git
-cd Intracranial-hemorrhage-detection-ICH-
+cd Intracranial-hemorrhage-detection-ICH-/Brain_Hemorrhage
 ```
 
 ### 3. Create and Activate a Virtual Environment (Optional but Recommended)
@@ -30,7 +31,7 @@ cd Intracranial-hemorrhage-detection-ICH-
 
 ```bash
 python -m venv venv
-venv\Scripts\activate
+.env\Scriptsctivate
 ```
 
 - **On macOS/Linux**:
@@ -48,7 +49,41 @@ Install the dependencies listed in `requirements.txt`:
 pip install -r requirements.txt
 ```
 
-### 5. Run the Server
+### 5. Create the Database
+
+Create a new database called `brain` using your preferred database management system. For PostgreSQL:
+
+```bash
+psql -U postgres
+CREATE DATABASE brain;
+```
+
+### 6. Configure the Database Settings
+
+In the `settings.py` file, update the `DATABASES` section with your database credentials:
+
+```python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'brain',
+        'USER': 'your_db_user',
+        'PASSWORD': 'your_db_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+```
+
+### 7. Run Migrations
+
+Apply the migrations to set up your database schema:
+
+```bash
+python manage.py migrate
+```
+
+### 8. Run the Server
 
 Start the Django development server:
 
