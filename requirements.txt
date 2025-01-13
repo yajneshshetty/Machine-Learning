@@ -1,0 +1,7 @@
+django
+mysqlclient
+numpy
+opencv-python
+pandas
+scikit-learn
+scikit-image
