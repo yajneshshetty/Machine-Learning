@@ -31,7 +31,7 @@ cd Intracranial-hemorrhage-detection-ICH-/Brain_Hemorrhage
 
 ```bash
 python -m venv venv
-.env\Scriptsctivate
+. venv\Scripts\activate
 ```
 
 - **On macOS/Linux**:
@@ -51,10 +51,9 @@ pip install -r requirements.txt
 
 ### 5. Create the Database
 
-Create a new database called `brain` using your preferred database management system. For PostgreSQL:
+Create a new database called `brain` using your preferred database management system.:
 
 ```bash
-psql -U postgres
 CREATE DATABASE brain;
 ```
 
@@ -65,7 +64,7 @@ In the `settings.py` file, update the `DATABASES` section with your database cre
 ```python
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.your_db',
         'NAME': 'brain',
         'USER': 'your_db_user',
         'PASSWORD': 'your_db_password',
