@@ -6,7 +6,7 @@ This project is a Django-based web application for Brain Hemorrhage detection.
 ## Prerequisites
 
 - Python (>= 3.6)
-- PostgreSQL (or any other supported database)
+- MySQL (or any other supported database)
 
 ## Installation
 
