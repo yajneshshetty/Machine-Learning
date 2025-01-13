@@ -30,7 +30,7 @@ cd Machine-Learning/Brain_Hemorrhage
 
 ```bash
 python -m venv venv
-.env\Scriptsctivate
+venv\Scripts\activate
 ```
 
 - **On macOS/Linux**:
