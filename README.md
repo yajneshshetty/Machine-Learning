@@ -20,8 +20,8 @@ Make sure you have Python installed on your system. You can download it from [py
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/yajneshshetty/Machine-Learning.git
-cd Machine-Learning/Brain_Hemorrhage
+git clone https://github.com/yajneshshetty/Intracranial-hemorrhage-detection-ICH-.git
+cd Intracranial-hemorrhage-detection-ICH-
 ```
 
 ### 3. Create and Activate a Virtual Environment (Optional but Recommended)
